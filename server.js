@@ -76,11 +76,12 @@ mark.manify(function(err, name) {
 });
 
 const findAllUsers = function() {
+	console.log('Find all users start');
     // find all users
     return User.find({}, function(err, res) {
         if (err) throw err;
         console.log('Actual database records are ' + res);
-    });
+	});
 }
 
 const findSpecificRecord = function() {
