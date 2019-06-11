@@ -147,7 +147,9 @@ const findBennyAndRemove = function() {
         });
 }
 
-Promise.all([kenny.save(), mark.save(), benny.save()])
+const logCatch = reason => console.log(reason);
+
+Promise.all([kenny.save().catch(logCatch), mark.save().catch(logCatch), benny.save().catch(logCatch)])
     .then(findAllUsers)
     .then(findSpecificRecord)
     .then(updadeUserPassword)
