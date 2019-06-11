@@ -76,12 +76,11 @@ mark.manify(function(err, name) {
 });
 
 const findAllUsers = function() {
-	console.log('Find all users start');
     // find all users
     return User.find({}, function(err, res) {
         if (err) throw err;
         console.log('Actual database records are ' + res);
-	});
+    });
 }
 
 const findSpecificRecord = function() {
@@ -147,9 +146,7 @@ const findBennyAndRemove = function() {
         });
 }
 
-const logCatch = reason => console.log(reason);
-
-Promise.all([kenny.save().catch(logCatch), mark.save().catch(logCatch), benny.save().catch(logCatch)])
+Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findAllUsers)
     .then(findSpecificRecord)
     .then(updadeUserPassword)
