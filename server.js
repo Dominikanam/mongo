@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://Dominikanam:Hakunamatatapumba6%21@cluster0-n0gtq.mongodb.net/test?retryWrites=true&w=majority', {
-    useMongoClient: true
+	//useMongoClient: true,
+	useNewUrlParser: true
 });
 
 //new user Schema
