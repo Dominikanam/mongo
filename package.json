@@ -4,7 +4,7 @@
   "description": "mongo task",
   "main": "server.js",
   "dependencies": {
-    "mongoose": "^5.5.14"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {},
   "scripts": {
